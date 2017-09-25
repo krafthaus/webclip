@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    display: flex;
+    
+    .container__workspace {
+        width: 100%;
+        padding: 15px 25px;
+        overflow-x: scroll;
+    }
+
+    .container__workspace:first-child:nth-last-child(2) {
+        border-right: 1px solid $color-gray-normal;
+        background-color: rgb(251, 252, 252);
+    }
+
+    .container__workspace--editor {
+        padding: 0;
+        height: 100%;
+        position: relative;
+        background-color: $color-gray-normal;
+    }
+}

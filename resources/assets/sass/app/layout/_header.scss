@@ -1,0 +1,31 @@
+.header {
+    position: absolute;
+    background-color: $color-white;
+    width: calc(100% - #{$sidebar-nav-width});
+    left: $sidebar-nav-width;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $color-gray-normal;
+
+    ul li a {
+        display: block;
+        padding: 10px;
+    }
+
+    .profile__avatar img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+    }
+
+    .profile__avatar a {
+        padding: 0;
+    }
+}
+
+.sidebar__nav--collapsed .header {
+    width: calc(100% - #{$sidebar-nav-collapsed-width});
+    left: $sidebar-nav-collapsed-width;
+}

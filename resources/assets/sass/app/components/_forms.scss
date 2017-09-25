@@ -1,0 +1,27 @@
+.form-group {
+    margin-bottom: 15px;
+    
+    label {
+        display: block;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="search"] {
+        width: 100%;
+    }
+
+    &.form-group--horizontal {
+        display: table;
+        width: 100%;
+
+        label {
+            display: table-cell;
+            width: 200px;
+            text-align: right;
+            padding-right: 15px;
+        }
+    }
+}

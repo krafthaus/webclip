@@ -1,0 +1,6 @@
+{
+  "name": "krafthaus-webclip",
+  "dependencies": {
+    "normalize-scss": "3.0.*"
+  }
+}

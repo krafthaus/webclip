@@ -1,0 +1,31 @@
+.dropdown {
+    position: relative;
+}
+
+.dropdown__menu {
+    position: absolute;
+    float: left;
+    min-width: 200px;
+    right: 0;
+    background-color: $color-white;
+    border: 1px solid $color-gray-normal;
+    border-radius: $border-radius;
+    z-index: 1;
+    display: none;
+    box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+}
+
+.dropdown__toggle--open + .dropdown__menu {
+    display: block;
+}
+
+.dropdown__item {
+    display: block;
+    padding: 0 15px;
+    font-size: $font-size;
+    line-height: 35px;
+
+    &:hover {
+        background-color: $color-gray-light;
+    }
+}

@@ -1,0 +1,81 @@
+$guide-margin: -10px;
+
+#__b-outliner,
+#__b-highlighter {
+    display: none;
+    position: absolute;
+    border: 1px solid $color-blue-normal;
+    pointer-events: none;
+    font-family: sans-serif;
+
+    span.__b-element-label {
+        position: absolute;
+        left: -1px;
+        display: block;
+        padding: 0 5px;
+        font-size: 12px;
+        font-weight: normal;
+        white-space: nowrap;
+        color: #fff;
+        background-color: $color-blue-normal;
+    }
+}
+
+#__b-highlighter {
+    z-index: 1;
+
+    &[data-guide]::before {
+        position: absolute;
+        content: '';
+        background-color: $color-blue-normal;
+        border-radius: 4px;
+    }
+
+    &[data-guide="top"]::before {
+        top: $guide-margin;
+        right: 0;
+        bottom: initial;
+        left: 0;
+        height: 4px;
+    }
+
+    &[data-guide="right"]::before {
+        top: 0;
+        right: $guide-margin;
+        bottom: 0;
+        left: initial;
+        width: 4px;
+    }
+
+    &[data-guide="bottom"]::before {
+        top: initial;
+        right: 0;
+        bottom: $guide-margin;
+        left: 0;
+        height: 4px;
+    }
+
+    &[data-guide="left"]::before {
+        top: 0;
+        right: initial;
+        bottom: 0;
+        left: $guide-margin;
+        width: 4px;
+    }
+}
+
+#__b-outliner {
+    border-color: #e0f;
+
+    span.__b-element-label {
+        background-color: #e0f;
+    }
+}
+
+body.b-body {
+    .b-empty {
+        outline: 1px dashed #555 !important;
+        box-shadow: inset 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 4px rgba(255, 255, 255, 0.2), inset 0 0 0 1px rgba(255, 255, 255, 0.3);
+        padding-bottom: 75px;
+    }
+}

@@ -1,0 +1,50 @@
+a.button,
+button.button {
+    display: inline-block;
+    appearance: none;
+    padding: 0 10px;
+    font-size: $font-size;
+    line-height: 35px;
+    background-color: $color-gray-light;
+    border: 1px solid $color-gray-normal;
+    border-radius: $border-radius;
+    transition: background-color $animation-time;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+    }
+
+    &.button--link {
+        color: $link-color;
+        background: transparent;
+        border: transparent;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &.button--primary {
+        background-color: $link-color;
+        border-color: $link-color;
+        color: white;
+
+        &:hover {
+            background-color: lighten($link-color, 5%);
+            color: white;
+        }
+    }
+
+    &.button--success {
+        background-color: $color-green;
+        border-color: $color-green;
+        color: white;
+
+        &:hover {
+            background-color: lighten($color-green, 5%);
+            color: white;
+        }
+    }
+
+}
