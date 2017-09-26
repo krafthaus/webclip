@@ -14,6 +14,7 @@ trait ServiceBindings
         Providers\RouteServiceProvider::class,
         Providers\BladeServiceProvider::class,
         \Laravel\Cashier\CashierServiceProvider::class,
+        \League\StatsD\Laravel\Provider\StatsdServiceProvider::class,
     ];
 
     /**

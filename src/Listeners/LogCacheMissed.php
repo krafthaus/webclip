@@ -2,7 +2,7 @@
 
 namespace KraftHaus\WebClip\Listeners;
 
-use Illuminate\Support\Facades\Redis;
+use League\StatsD\Laravel5\Facade\StatsdFacade as Statsd;
 
 class LogCacheMissed
 {
@@ -13,7 +13,6 @@ class LogCacheMissed
      */
     public function handle()
     {
-        // increment cache miss.
-        Redis::incr('cache:misses:'.today());
+        Statsd::increment('cache:miss');
     }
 }
