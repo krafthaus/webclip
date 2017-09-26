@@ -21,12 +21,6 @@ class WebClipServiceProvider extends ServiceProvider
         $this->registerResources();
         $this->defineAssetPublishing();
         $this->registerModelObservers();
-
-        // Fix string length for mysql 5.6 databases (production == 5.7.*).
-        // https://laravel-news.com/laravel-5-4-key-too-long-error
-        if ($this->app->environment('local', 'testing')) {
-            Schema::defaultStringLength(191);
-        }
     }
 
     /**
