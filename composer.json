@@ -15,7 +15,10 @@
   ],
   "require": {
     "php": ">=7.0.0",
-    "kalnoy/nestedset": "^4.2"
+    "kalnoy/nestedset": "^4.2",
+    "laravel/passport": "^4.0",
+    "league/statsd": "1.4.*",
+    "predis/predis": "^1.1"
   },
   "require-dev": {
     "orchestra/testbench": "~3.4",
